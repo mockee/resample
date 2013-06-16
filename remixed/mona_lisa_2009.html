@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <title>mona lisa remixed (2009)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+        display: table;
+      }
+
+      body {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-family: "Droid Serif","Cambria","Georgia","Times New Roman","Times",serif;
+        background: white;
+      }
+
+      #canvas,
+      #canvas b {
+        display: inline-block;
+      }
+
+      #canvas {
+        width: 400px;
+        line-height: 0;
+      }
+
+      #canvas b {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px 10px 0;
+        border-radius: 15px;
+      }
+
+      p {
+        color: gray;
+        margin-top: 20px;
+        line-height: 1.8;
+      }
+
+      i {
+        font-size: 12px;
+        color: lightgray;
+      }
+
+      blockquote {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: #fff;
+        font-size: 14px;
+        font-style: italic;
+        line-height: 1.5;
+        text-align: left;
+        width: 390px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas"></div>
+    <p>
+      Mona Lisa Remixed 2009 (in HTML & CSS)<br>
+      <i>Migrated from Gary Andrew Clarke's “Art Remixed” Series by mockee.</i>
+    </p>
+    <blockquote>
+      This principle—also called antialiasing—is the same that is used when
+      photos are resampled to a lower resolution.
+      Our eyes and brain interpret the information contained within the gray
+      pixels and translate it back into sharp contours,
+      so what we perceive is fairly close to the original shape.
+      A similar effect is at work when a relatively coarse newspaper image
+      that can appear nicely shaded if we hold it far enough away
+      (or similarly, in the art of Chuck Close).
+    </blockquote>
+
+    <script>
+      ;(function() {
+        var doc = document
+          , frag = doc.createDocumentFragment()
+          , colors = [
+              '6f7031', '807e3b', '8c8339', '9a9542', 'a0a254', 'b5ac62', 'ccbc66', 'ccb660', 'd1c477', 'cac384'
+            , '85893c', 'a19545', 'b5a147', 'b5a048', '80642b', '49331b', 'a8944e', 'e6cf76', 'e7d67b', 'e0d179'
+            , '929542', 'bfaf50', 'd0c060', 'b18d41', 'fabd4f', '8b541d', '282115', 'd1c66f', 'f9ee87', 'f3e480'
+            , '55551b', '777124', '9a9648', '8a6023', 'f8a740', 'c07b2d', '150905', '697437', 'c3d063', 'efe570'
+            , '1a2312', '2d3512', '1e280f', '553512', 'f7a03e', 'a86b26', '030004', '434f25', '6e8d40', '7c9340'
+            , '0b0d11', '222716', '464a22', '19120b', '603c11', '482e0a', '050105', '41441f', '5f6c2e', '5b652b'
+            , '131914', '353617', '2f331a', '0b0808', '886120', 'e49f3b', '5e3a10', '1b1611', '897b28', '9c8a2f'
+            , '1e1d14', '504613', '0e0e07', '78531a', 'fedc78', 'fdd26c', '9a6423', '47300f', '463b12', '947828'
+            , '352314', '4b370e', '040b08', '634d17', 'c79e38', 'b49133', '3f300b', '191910', '00010a', '3a2314'
+            , '362712', '2f1f11', '000309', '00080d', '0a0f0a', '000509', '00050f', '2a2916', '080e11', '1f1915'
+            , '0f1616', '040b0f', '00040b', '000107', '00050d', '00070c', '030b0e', '050c11', '01070f', '091016'
+            , '00080e', '10110f', '1d1b10', '1d190d', '000708', '000508', '000b0b', '000912', '010c13', '021116'
+            , '000d11', '070e10', '403112', 'c1752c', '92591f', '241f0a', '0e151b', '0b1111', '000d11', '041617'
+            , '000e13', '00050d', '312711', '754e19', '89521c', '52310c', '241b0f', '161515', '010d12', '041519'
+            ]
+
+        for (var i in colors) {
+          var o = doc.createElement('b')
+          o.style.backgroundColor = '#' + colors[i]
+          frag.appendChild(o)
+        }
+
+        doc.getElementById('canvas').appendChild(frag)
+      }())
+    </script>
+  </body>
+</html>
